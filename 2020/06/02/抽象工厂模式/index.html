@@ -6,20 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://lzh1600692457.github.io">
-  <title>测试测试 | 面朝大海，春暖花开</title>
+  <title>抽象工厂模式 | 面朝大海，春暖花开</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="##测试使用">
+  <meta name="description" content="抽象工厂模式">
 <meta property="og:type" content="article">
-<meta property="og:title" content="测试测试">
-<meta property="og:url" content="https://lzh1600692457.github.io/2020/05/17/%E6%B5%8B%E8%AF%95%E6%B5%8B%E8%AF%95/index.html">
+<meta property="og:title" content="抽象工厂模式">
+<meta property="og:url" content="https://lzh1600692457.github.io/2020/06/02/%E6%8A%BD%E8%B1%A1%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/index.html">
 <meta property="og:site_name" content="面朝大海，春暖花开">
-<meta property="og:description" content="##测试使用">
+<meta property="og:description" content="抽象工厂模式">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-05-17T03:45:59.000Z">
-<meta property="article:modified_time" content="2020-05-24T11:05:48.371Z">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200601140605958.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwODk2NTk0,size_16,color_FFFFFF,t_70">
+<meta property="article:published_time" content="2020-06-02T01:59:16.000Z">
+<meta property="article:modified_time" content="2020-06-07T12:57:13.676Z">
 <meta property="article:author" content="Li Zhihui">
-<meta property="article:tag" content="test">
+<meta property="article:tag" content="设计模式">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20200601140605958.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwODk2NTk0,size_16,color_FFFFFF,t_70">
   
     <link rel="alternative" href="/atom.xml" title="面朝大海，春暖花开" type="application/atom+xml">
   
@@ -159,14 +161,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-测试测试" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-抽象工厂模式" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      测试测试
+      抽象工厂模式
     </h1>
   
 
@@ -177,8 +179,8 @@
               <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
         </span>
 
-<a href="/2020/05/17/%E6%B5%8B%E8%AF%95%E6%B5%8B%E8%AF%95/" class="archive-article-date">
-  	<time datetime="2020-05-17T03:45:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-17</time>
+<a href="/2020/06/02/%E6%8A%BD%E8%B1%A1%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/" class="archive-article-date">
+  	<time datetime="2020-06-02T01:59:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-02</time>
 </a>
         <!-- 添加字数统计和阅读时长 -->
        
@@ -187,7 +189,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">48字</span>
+        <span class="post-count">735字</span>
       </span>
     </span>
 
@@ -196,7 +198,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">1分</span>
+        <span class="post-count">3分</span>
       </span>
     </span>
 </div>
@@ -209,16 +211,49 @@
 
     <div class="article-entry" itemprop="articleBody">
       
-        <p>##测试使用</p>
-<a id="more"></a>
+        <h2 id="抽象工厂模式"><a href="#抽象工厂模式" class="headerlink" title="抽象工厂模式"></a>抽象工厂模式</h2><a id="more"></a>
 
-<h3 id="一级目录"><a href="#一级目录" class="headerlink" title="一级目录"></a>一级目录</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new blogName</span><br><span class="line">$ <span class="built_in">cd</span> directory</span><br><span class="line">$ ls</span><br><span class="line">$ cat fileAllName</span><br><span class="line">$ vim fileAllName</span><br><span class="line">$ rm fileAllName</span><br><span class="line">$ vim fileAllName</span><br></pre></td></tr></table></figure>
-
-<h4 id="二级目录"><a href="#二级目录" class="headerlink" title="二级目录"></a>二级目录</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ git clont https:&#x2F;&#x2F;.....</span><br><span class="line">$ git add</span><br><span class="line">$ git commit</span><br><span class="line">$ git pubsh</span><br></pre></td></tr></table></figure>
-
-<h3 id="三级目录"><a href="#三级目录" class="headerlink" title="三级目录"></a>三级目录</h3><blockquote>
-<p>Emmm…<br>测试文章</p>
+<h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><p><strong>意图：</strong> 提供一个创建一系列相关或相互依赖对象的接口，而无需指定它们具体的类。</p>
+<p><strong>主要解决：</strong> 主要解决接口选择的问题。</p>
+<p><strong>何时使用：</strong> 系统的产品有多于一个的产品族，而系统只消费其中一族的产品。</p>
+<p><strong>如何解决：</strong> 在一个产品族里定义多个产品。</p>
+<p><strong>关键代码：</strong> 在一个工厂里聚合多个同类产品。</p>
+<p><strong>应用实例：</strong> QQ换肤，直接更换一个产品族。该产品族下的所有产品一起更换。</p>
+<p><strong>注意事项：</strong> 产品族难扩展，产品等级易扩展。</p>
+<h3 id="类图"><a href="#类图" class="headerlink" title="类图"></a>类图</h3><p><img src="https://img-blog.csdnimg.cn/20200601140605958.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwODk2NTk0,size_16,color_FFFFFF,t_70" alt="抽象工厂模式"></p>
+<h3 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h3><blockquote>
+<ol>
+<li>定义产品族接口，如汽车工厂产品族，其生产的所有产品就是一个产品族。</li>
+<li>定义一些具体的产品族工厂，每个工厂生产自己的产品族产品。</li>
+<li>定义产品族的所有产品接口。不同的具体产品便组成某产品族。</li>
+<li>客户端只需要知道某一具体产品族工厂就可生产这一产品族的一个或多个产品。</li>
+</ol>
 </blockquote>
+<ul>
+<li>产品族工厂接口</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//汽车工厂 同一个工厂生产的就是一个产品族</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">CarFactory</span> </span>&#123;</span><br><span class="line">	<span class="function">Engine <span class="title">createEngine</span><span class="params">()</span></span>;</span><br><span class="line">	<span class="function">Seat <span class="title">createSeate</span><span class="params">()</span></span>;</span><br><span class="line">	<span class="function">Tyre	 <span class="title">createTyre</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>某具体产品族工厂</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//高端汽车工厂</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LuxuryCarFactory</span> <span class="keyword">implements</span> <span class="title">CarFactory</span> </span>&#123;</span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> Engine <span class="title">createEngine</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">new</span> LuxuryEngine();</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> Seat <span class="title">createSeate</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">new</span> LuxurySeat();</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> Tyre <span class="title">createTyre</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">new</span> LuxuryTyre();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//低端汽车工厂</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LowCarFactory</span> <span class="keyword">implements</span> <span class="title">CarFactory</span> </span>&#123;</span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> Engine <span class="title">createEngine</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">new</span> LowEngine();</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> Seat <span class="title">createSeate</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">new</span> LowSeat();</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> Tyre <span class="title">createTyre</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">new</span> LowTyre();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>产品族中包含的产品的接口</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//汽车的发动机接口</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Engine</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">run</span><span class="params">()</span></span>;</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">start</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//汽车的座椅接口</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Seat</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">massage</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//汽车的轮胎接口</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Tyre</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">revolve</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>产品族中包含的某具体产品</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//高端发动机的实现类</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">LuxuryEngine</span> <span class="keyword">implements</span> <span class="title">Engine</span> </span>&#123;</span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"跑得快！跑得快！！"</span>);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">start</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"起步快！起步快！！"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//低端发动机的实现类</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">LowEngine</span> <span class="keyword">implements</span> <span class="title">Engine</span> </span>&#123;</span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"跑得慢！跑得慢！！"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">start</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"起步慢！起步慢！！"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//高端座椅的实现类</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">LuxurySeat</span> <span class="keyword">implements</span> <span class="title">Seat</span> </span>&#123;</span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">massage</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"可以自动按摩！"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//低端座椅的实现类</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">LowSeat</span> <span class="keyword">implements</span> <span class="title">Seat</span> </span>&#123;</span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">massage</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"不能按摩！"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//高端轮胎的实现类</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">LuxuryTyre</span> <span class="keyword">implements</span> <span class="title">Tyre</span> </span>&#123;</span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">revolve</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"旋转快磨损小！"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//低端轮胎的实现类</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">LowTyre</span> <span class="keyword">implements</span> <span class="title">Tyre</span> </span>&#123;</span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">revolve</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"旋转慢磨损大！"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>客户端</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Client</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="comment">//产品族</span></span><br><span class="line">		CarFactory factory1 = <span class="keyword">new</span> LuxuryCarFactory();</span><br><span class="line">		Engine e1 = factory1.createEngine();</span><br><span class="line">		e1.run();</span><br><span class="line">		e1.start();</span><br><span class="line">		</span><br><span class="line">		CarFactory factory2 = <span class="keyword">new</span> LowCarFactory();</span><br><span class="line">		Engine e2 = factory2.createEngine();</span><br><span class="line">		e2.run();</span><br><span class="line">		e2.start();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 
       
 
@@ -233,7 +268,7 @@
                 
                 <br>
                 <strong>本文链接：</strong>
-                https://lzh1600692457.github.io/2020/05/17/%E6%B5%8B%E8%AF%95%E6%B5%8B%E8%AF%95/
+                https://lzh1600692457.github.io/2020/06/02/%E6%8A%BD%E8%B1%A1%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/
                 <br>
                 <strong>版权声明：</strong>
                 本作品采用
@@ -284,7 +319,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">test</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">设计模式</a>
         		</li>
       		
 		</ul>
@@ -340,7 +375,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://lzh1600692457.github.io/2020/05/17/%E6%B5%8B%E8%AF%95%E6%B5%8B%E8%AF%95/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://lzh1600692457.github.io/2020/06/02/%E6%8A%BD%E8%B1%A1%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -354,18 +389,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/05/30/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2020/06/03/%E9%80%82%E9%85%8D%E5%99%A8%E6%A8%A1%E5%BC%8F/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          十大经典排序算法
+          适配器模式
         
       </div>
     </a>
   
   
-    <a href="/2020/05/17/Hello-hexo/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Hello Hexo</div>
+    <a href="/2020/06/01/%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">工厂模式</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -392,7 +427,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#一级目录"><span class="toc-number">1.</span> <span class="toc-text">一级目录</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#二级目录"><span class="toc-number">1.1.</span> <span class="toc-text">二级目录</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三级目录"><span class="toc-number">2.</span> <span class="toc-text">三级目录</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#抽象工厂模式"><span class="toc-number">1.</span> <span class="toc-text">抽象工厂模式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#介绍"><span class="toc-number">1.1.</span> <span class="toc-text">介绍</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#类图"><span class="toc-number">1.2.</span> <span class="toc-text">类图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#实现"><span class="toc-number">1.3.</span> <span class="toc-text">实现</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -417,7 +452,7 @@
 <script src="https://www.wenjunjiang.win/js/gitment.js"></script>
 <script>
 var gitment = new Gitment({
-  id: "测试测试",
+  id: "抽象工厂模式",
   owner: 'LZH1600692457',
   repo: 'LZH1600692457.github.io',
   oauth: {
@@ -539,7 +574,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+                <a href="javascript:void(0)" class="js-tag color5">设计模式</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">多线程</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -551,7 +590,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">test</a>
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
             
             <div class="clearfix"></div>
